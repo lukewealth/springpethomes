@@ -697,6 +697,84 @@ input[type="submit"]:hover {
 }
 
 
+.ppm_section {
+  margin: 30px 0;
+  font-family: Arial, sans-serif;
+}
+
+.ppm_section h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ppm_section h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.ppm_section h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.ppm_section p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ppm_section h4::after {
+  content: "\25BC"; /* Downward triangle symbol */
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.ppm_section p:not(:last-child) {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.ppm_section p.read-more {
+  max-height: 500px; /* Change this value to your preference */
+  overflow: hidden;
+}
+
+.ppm_section p.read-more.show-content {
+  max-height: 1000px; /* Change this value to your preference */
+}
+
+.ppm_section p.read-more::after {
+  content: "Read more";
+  display: inline-block;
+  margin-left: 5px;
+  color: blue;
+  cursor: pointer;
+}
+
+.ppm_section p.read-more:hover::after {
+  text-decoration: underline;
+}
+
+.ppm_section p.read-more.show-content::after {
+  content: "Read less";
+}
+
+.ppm_section p.read-more.show-content:hover::after {
+  text-decoration: underline;
+}
+
+.ppm_section p.read-more:hover {
+  background-color: rgba(0, 0, 255, 0.1);
+  cursor: pointer;
+}
+
+.ppm_section .author {
+  margin-top: 20px;
+  font-style: italic;
+}
 
 
 .label-info {
