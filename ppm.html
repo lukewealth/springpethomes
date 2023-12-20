@@ -120,186 +120,108 @@
             </section>
             <!-- end slider section -->
         </div>
-        <!-- find section -->
-        <section class="find_section">
+
+        <!-- end info_section -->
+
+        <section class="ppm layout_padding-bottom layout_padding">
             <div class="container">
-                <form action="">
-                    <div class="form-row">
-                        <div class="col-md-5">
-                            <div class="col-md-3">
-                                <label for="Location">
-                                    <img src="Asset/customer-removebg-preview.png" alt="icon" class="icons">
-                                    <input type="range" class="dropbtn">
-                                </label>
-                                <!-- Your location input field goes here -->
-                            </div>
-                            <label for="Products">
-                                <img src="Asset/construction-worker-avatar-icon-vector-removebg-preview.png" alt="icons"
-                                    class="icons">
-                            </label>
-                            <input list="magicHouses" id="Properties" name="Products" placeholder="" />
-                            <datalist id="magicHouses">
-                                <option value="Gryffindor">
-                                <option value="Hufflepuff">
-                                <option value="Slytherin">
-                                <option value="Ravenclaw">
-                                <option value="Horned Serpent">
-                                <option value="Thunderbird">
-                                <option value="Pukwudgie">
-                                <option value="Wampus">
-                            </datalist>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="heading_container">
+                            <h2>Springpet PPM</h2>
                         </div>
-                        <div class="col-md-3">
-                            <input type="text" class="form-control" placeholder="Price">
+                        <div class="team-member">
+                            <img src="images/Mrs Chinaza.jpeg" alt="Mrs. Chinaza">
                         </div>
-                        <div class="col-md-3">
-                            <button onclick="showDropdownData()" type="submit" class="dropbtn">
-                                search
-                            </button>
+                        <p>
+                            Welcome to Springpet's Private Partnership Membership — a comprehensive wealth solution that
+                            encompasses a diverse array of asset classes tailored to match your risk appetite.
+                        </p>
+                        <p>
+                            If you're seeking diverse investment options with a sophisticated touch, we offer a
+                            structured
+                            approach to enhance and diversify your real estate investment returns.
+                        </p>
+                        <h3>Explore our membership categories:</h3>
+                        <div class="membership-categories">
+                            <h4>Partnership Investors:</h4>
+                            <p>
+                                Individuals dedicated to investing their financial resources, intellect, and strength in
+                                the
+                                development of our projects.
+                            </p>
+                            <h4>Partnership Associates:</h4>
+                            <p>
+                                Aspiring real estate entrepreneurs receive comprehensive training from our seasoned
+                                experts.
+                                Upon completion, associates can purchase acres of land at a discounted rate from
+                                SpringPet Homes
+                                Limited. They can then market and sell individual plots to individuals looking to invest
+                                in
+                                properties.
+                            </p>
+                            <p>
+                                This approach offers a remarkable opportunity for real estate enthusiasts to leverage
+                                SpringPet
+                                Homes Limited's offerings. Seize the chance to be a part of our thriving community and
+                                maximize
+                                your potential in the dynamic world of real estate.
+                            </p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="signup_section">
+            <div class="container">
+                <h2>Sign Up for Private Partnership Membership (PPM)</h2>
+                <form id="signup_form">
+                    <!-- Basic Information -->
+                    <div class="form-group">
+                        <label for="full_name">Full Name:</label>
+                        <input type="text" id="full_name" name="full_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <!-- Business Information -->
+                    <div class="form-group">
+                        <label for="company_name">Company Name:</label>
+                        <input type="text" id="company_name" name="company_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="business_type">Business Type:</label>
+                        <input type="text" id="business_type" name="business_type" required>
+                    </div>
+                    <!-- Location Information -->
+                    <div class="form-group">
+                        <label for="country">Country:</label>
+                        <select id="country" name="country" required>
+                            <option value="" selected disabled>Select Country</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Canada">Canada</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <!-- Add more countries here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State:</label>
+                        <select id="state" name="state" required>
+                            <option value="" selected disabled>Select State</option>
+                            <!-- States for selected countries will be populated using JavaScript -->
+                        </select>
+                    </div>
+                    <button type="submit">Sign Up</button>
                 </form>
             </div>
         </section>
-
-
-        <!-- end find section -->
-
-
-
-
-
-
-        <!-- about section -->
-
-        <section class="about_section layout_padding-bottom">
-            <div class="square-box">
-                <img src="images/square.png" alt="">
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="img-box">
-                            <img src="images/Frame 300.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="detail-box">
-                            <div class="heading_container">
-                                <h2>
-                                    About Us
-                                </h2>
-                            </div>
-
-                            <p class="label-info owl-carousel owl-theme owl-loaded">
-                                Welcome to <img src="images/springpet-social-logo.png" width="100px" height="50px"
-                                    alt="">
-                                Springpet Homes Limited, a
-                                renowned Real
-                                Estate and Property Developer. <br>
-                                We offer a range of high-quality landed properties, investment opportunities, and
-                                listings to help you
-                                find your dream home.5
-                                Our diverse options and packages aim to assist you in making your home ownership a
-                                reality.
-                                <video controls autoplay width="200px" height="200px">
-                                    <source media="(min-width:500px )" srcset="" src="springpetcontact.mp4"
-                                        type="video/mp4">
-                                    Your browser does not support the video tag.
-
-                                </video>
-                            </p>
-                            <a href="about.html">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <br>
-        <br>
-        <!-- find section -->
-        <section class="find_section">
-            <div class="container">
-                <div class="icon-container">
-                    <div class="icon-item" onclick="zoomIn(this)">
-
-                        <img src="Asset/construction.gif" alt="Icon" class="icon-img">
-                        <a href="properties.html"><span class="label-info">
-                                <h2>Construction </h2>
-                            </span></a>
-
-                    </div>
-                    <div class="icon-item" onclick="zoomIn(this)">
-                        <img src="Asset/home.gif" alt="Icon" class="icon-img">
-                        <span class="label-info">
-                            <h2>Home</h2>
-                        </span>
-                    </div>
-                    <div class="icon-item" onclick="zoomIn(this)">
-                        <img src="Asset/Investment.webp" alt="Icon" class="icon-img">
-                        <span class="label-info">
-                            <h2> Investment</h2>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- contact section -->
-
-
-
-        <section class="contact_section ">
-            <div class="container">
-                <div class="heading_container">
-                    <h2>
-                        Get In Touch
-                    </h2>
-                </div>
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6 px-0">
-                        <div class="map_container">
-                            <div class="map-responsive">
-                                <iframe
-                                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
-                                    width="300" height="100" frameborder="0" style="border:0; width: 100%; height:100%"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-5 ">
-                        <div class="form_container">
-                            <form action="">
-                                <div>
-                                    <input type="text" placeholder="Name" />
-                                </div>
-                                <div>
-                                    <input type="email" placeholder="Email" />
-                                </div>
-                                <div>
-                                    <input type="text" placeholder="Phone Number" />
-                                </div>
-                                <div>
-                                    <input type="text" class="message-box" placeholder="Message" />
-                                </div>
-                                <div class="d-flex ">
-                                    <button>
-                                        Send
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- end contact section -->
-
 
 
         <!-- info section -->
@@ -309,8 +231,8 @@
                     <div class="col-md-3">
                         <div class="info_contact">
                             <h5>
-                                About SpringPet Homes<br>
-                                Apartment
+                                Springpet Homes<br>
+
                             </h5>
                             <div>
                                 <div class="img-box">
@@ -318,7 +240,7 @@
                                 </div>
                                 <p>
 
-                                    18 Oluwole Baker St, Aja, Lekki 106104, Lagos
+                                    18 Oluwole Baker St, Ajah, Lekki 106104, Lagos
                                 </p>
 
                             </div>
@@ -349,7 +271,7 @@
                             </h5>
                             <!-- Additional Information -->
                             <li>
-                                <p>SpringPet Homes is a trusted real estate company based in Lagos, Nigeria. With a
+                                <p>Springpet Homes is a trusted real estate company based in Lagos, Nigeria. With a
                                     commitment to
                                     providing exceptional properties and services, we specialize in offering exquisite
                                     living spaces for
@@ -370,7 +292,8 @@
                                 <li><a href="https://www.instagram.com/springpethomes" target="_blank">Instagram</a>
                                 </li>
                                 <li><a href="https://www.linkedin.com/company/springpethomes"
-                                        target="_blank">LinkedIn</a></li>
+                                        target="_blank">LinkedIn</a>
+                                </li>
                                 <!-- End of Social Media Handles -->
 
                             </ul>
@@ -406,220 +329,26 @@
                 </div>
             </div>
         </section>
-    </div>
-    </div>
 
-    <!-- end info_section -->
+        <!-- end info_section -->
 
-    <section class="ppm_section">
-        <div class="container">
-            <h2>SpringPet PPM</h2>
-            <img src="images/Mrs Chinaza.jpeg" alt="" class="photo-gallery">
-            <p>
-                Welcome to the realm of Private Partnership Membership — a holistic wealth solution encompassing a
-                diverse array of asset classes tailored to your risk appetite.
-            </p>
-            <p>
-                If you're in search of multiple investment options with a more sophisticated touch, we offer a
-                structured approach to enhance and diversify your real estate investment returns.
-            </p>
-            <h3>Explore our membership categories:</h3>
-            <h4>Partnership Investors:</h4>
-            <p>
-                Individuals committed to investing their financial resources, intellect, and strength in the development
-                of our projects.
-            </p>
-            <h4>Partnership Associates:</h4>
-            <p>
-                Aspiring real estate entrepreneurs who receive comprehensive training from our seasoned experts. After
-                completing their training, associates have the opportunity to purchase acres of land at a discounted
-                rate from SpringPet Homes Limited. They can then market and sell individual plots to individuals looking
-                to invest in properties.
-            </p>
-            <p>
-                This dual approach provides an incredible opportunity for real estate enthusiasts to leverage the
-                offerings of SpringPet Homes Limited. Seize the chance to be a part of our thriving community and
-                maximize your potential in the dynamic world of real estate.
-            </p>
-        </div>
-    </section>
-
-    <!-- contact section -->
-    <section class="contact_section ">
-        <div class="container">
-            <div class="heading_container">
-                <h2>
-                    Get In Touch
-                </h2>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 px-0">
-                    <div class="map_container">
-                        <div class="map-responsive">
-                            <iframe
-                                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
-                                width="300" height="100" frameborder="0" style="border:0; width: 100%; height:100%"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
+        <footer>
+            <!-- footer section -->
+            <section class="container-fluid footer_section ">
+                <div class="container">
+                    <p>
+                        &copy; <span id="displayYear"></span> All Rights Reserved By
+                        <a href="https://tricode.pro/">TRICODE</a>
+                    </p>
                 </div>
-                <div class="col-lg-4 col-md-5 ">
-                    <div class="form_container">
-                        <form action="">
-                            <div>
-                                <input type="text" placeholder="Name" />
-                            </div>
-                            <div>
-                                <input type="email" placeholder="Email" />
-                            </div>
-                            <div>
-                                <input type="text" placeholder="Phone Number" />
-                            </div>
-                            <div>
-                                <input type="text" class="message-box" placeholder="Message" />
-                            </div>
-                            <div class="d-flex ">
-                                <button>
-                                    Send
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- end contact section -->
-
-
-
-    <!-- info section -->
-    <section class="info_section ">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="info_contact">
-                        <h5>
-                            About SpringPet Homes<br>
-                            Apartment
-                        </h5>
-                        <div>
-                            <div class="img-box">
-                                <img src="images/location.png" width="18px" alt="">
-                            </div>
-                            <p>
-
-                                18 Oluwole Baker St, Aja, Lekki 106104, Lagos
-                            </p>
-
-                        </div>
-                        <div>
-                            <div class="img-box">
-                                <img src="images/phone.png" width="12px" alt="">
-                            </div>
-                            <p>
-                                +234 9130467349<br>
-                                +234 8133976618
-                            </p>
-                        </div>
-                        <div>
-                            <div class="img-box">
-                                <img src="images/mail.png" width="18px" alt="">
-                            </div>
-                            <p>
-                                Sales@springpethome.com<br>
-                                springpethomes@gmail.com
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="info_info">
-                        <h5>
-                            Information
-                        </h5>
-                        <!-- Additional Information -->
-                        <li>
-                            <p>SpringPet Homes is a trusted real estate company based in Lagos, Nigeria. With a
-                                commitment to
-                                providing exceptional properties and services, we specialize in offering exquisite
-                                living spaces for
-                                both pets and owners.</p>
-                        </li>
-
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="info_links">
-                        <h5>Useful Links</h5>
-                        <ul>
-
-                            <!-- End of Additional Information -->
-                            <!-- Social Media Handles -->
-                            <li><a href="https://www.facebook.com/springpethomes" target="_blank">Facebook</a></li>
-                            <li><a href="https://www.instagram.com/springpethomes" target="_blank">Instagram</a></li>
-                            <li><a href="https://www.linkedin.com/company/springpethomes" target="_blank">LinkedIn</a>
-                            </li>
-                            <!-- End of Social Media Handles -->
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="info_form ">
-                        <h5>
-                            Newsletter
-                        </h5>
-                        <form action="">
-                            <input type="email" placeholder="Enter your email">
-                            <button>
-                                Subscribe
-                            </button>
-                        </form>
-                        <div class="social_box icons">
-                            <a href="https://fb.com/springpetthomes">
-                                <img src="images/fb.png" alt="">
-                            </a>
-                            <a href="https://instagram.com/springpethomes">
-                                <img src="Asset/yellow-instagram-removebg-preview.png" class="icons" alt="">
-                            </a>
-                            <a href="https://linkedin.com/in/springpethomes">
-                                <img src="images/linkedin.png" alt="">
-                            </a>
-                            <a href="https://youtube.com/springpethomes">
-                                <img src="images/youtube.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- end info_section -->
-
-    <footer>
-        <!-- footer section -->
-        <section class="container-fluid footer_section ">
-            <div class="container">
-                <p>
-                    &copy; <span id="displayYear"></span> All Rights Reserved By
-                    <a href="https://tricode.pro/">TRICODE</a>
-                </p>
-            </div>
-        </section>
-        <!-- end  footer section -->
-    </footer>
-    <script src="jquery.min.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
+            </section>
+            <!-- end  footer section -->
+        </footer>
+        <script src="jquery.min.js"></script>
+        <script src="owlcarousel/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
 
 
 </body>
