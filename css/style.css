@@ -664,10 +664,15 @@ input[type="submit"]:hover {
 .icon-container {
   display: flex;
   flex-wrap: wrap;
-  padding: 15px;
+  padding: 10px;
   margin: 50px;
-  position: absolute;
-  max-width: 200px;
+  position: relative;
+  max-block-size: 70%;
+  border-radius: 5px;
+  padding-bottom: 10%;
+  padding-top: 10px; 
+  justify-content: flex-start;
+
 
 }
 
