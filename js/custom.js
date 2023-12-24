@@ -3,6 +3,22 @@ function zoomIn(element) {
 }
 
 // You can add more functionalities or adjust the animation as per your requirements.
+const slideshow = document.querySelector('.slideshow');
+const images = document.querySelectorAll('.slideshow img');
+let currentImage = 0;
+
+const slideImage = () => {
+  images.forEach(img => {
+    img.style.transform = 'translate(-150%, -50%)'; // Slide current image to the left
+  });
+
+  images[currentImage].style.transform = 'translate(-50%, -50%)'; // Center the next image
+  currentImage = (currentImage + 1) % images.length;
+};
+
+slideImage(); // Show the first image centered immediately
+
+setInterval(slideImage, 20000); // Transition to the next image after 10 seconds delay (10s display + 10s delay) // Transition to the next image after 10 seconds delay (10s display + 10s delay)
 
 // JavaScript for chatbot functionality
 // Define your chatbot logic here
