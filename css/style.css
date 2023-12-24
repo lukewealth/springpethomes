@@ -57,6 +57,9 @@ body {
 hero_area {
   position: relative;
   overflow: hidden;
+}.hero_area {
+  position: relative;
+  overflow: hidden;
 }
 
 .hero_area::before {
@@ -66,10 +69,10 @@ hero_area {
   left: 0;
   width: 200%; /* Double the width to accommodate two images */
   height: 100%;
-  background-image: url(../images/3d4.jpg), url(../images/3d.jpg),  url(../images/3d1.jpg),  url(../images/3d3.jpg),  url(../images/hero-bg.jpg),  url(../images/pexels-christina-morillo-1181421-89cf22b6-scaled.jpg); /* Add more images as needed */
-  background-size: 50% 100%, 50% 100%; /* Half width for each image */
+  background-image: url(../images/hero-bg.jpg), url(../images/3d4.jpg), url(../images/3d.jpg),  url(../images/3d1.jpg),  url(../images/3d3.jpg),  url(../images/pexels-christina-morillo-1181421-89cf22b6-scaled.jpg);  /* Add more images as needed */
+  background-size: cover;
   background-position: left, right; /* Position each image at the respective side */
-  animation: slideImages 10s infinite linear; /* Animation for sliding effect */
+  animation: slideImages 20s infinite linear; /* Animation for sliding effect */
 }
 
 @keyframes slideImages {
@@ -81,8 +84,24 @@ hero_area {
   }
 }
 
-/* Mobile responsiveness */ 
-@media (max-width: 768px) { .hero_area::before { background-size: 100% auto; /* Full width for each image on smaller screens */ } }
+.sub_page .hero_area {
+  height: auto;
+  background: none;
+  background-color: #0f2480;
+}
+
+.header_section {
+  overflow-x: hidden;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero_area::before {
+    background-size: 100% auto; /* Full width for each image on smaller screens */
+  }
+}
+
+
 
 .sub_page .hero_area {
   height: auto;
