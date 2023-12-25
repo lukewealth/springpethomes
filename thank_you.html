@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .thank-you {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Submit Form</h2>
+    <form action="submit.php" method="post">
+        <!-- Your form fields go here -->
+        <!-- For demonstration purposes, let's assume you have fields like full name, email, phone, etc. -->
+        <input type="text" name="full_name" placeholder="Full Name" required><br><br>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        <input type="tel" name="phone" placeholder="Phone Number" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="thank-you">
+        <h2>Thank You for Your Submission!</h2>
+        <p>Your form has been submitted successfully. 😊</p>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const thankYouMessage = document.querySelector('.thank-you');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            // Here you can add code to send form data using AJAX to a PHP script or proceed with your PHP handling
+            // For demonstration purposes, just showing the thank you message with an emoji
+            form.style.display = 'none';
+            thankYouMessage.style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>

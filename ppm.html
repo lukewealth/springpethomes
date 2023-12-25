@@ -184,9 +184,11 @@
         <section class="signup_section">
             <div class="container">
                 <div class="heading_container">
-                    <h2>Sign Up for P(PPM)</h2>
+                    <h2>PPM Sign Up </h2>
                 </div>
-                <form id="signup_form">
+
+
+                <form action="submit.php" method="post" id="signup_form">
                     <!-- Basic Information -->
                     <div class="form-group">
                         <label for="full_name">Full Name:</label>
@@ -208,6 +210,47 @@
                     <div class="form-group">
                         <label for="business_type">Business Type:</label>
                         <input type="text" id="business_type" name="business_type" required>
+                    </div>
+                    <!-- Additional Information -->
+                    <div class="form-group">
+                        <label for="investment_reason">Reason for Investment:</label>
+                        <textarea id="investment_reason" name="investment_reason" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="roi_timeframe">Expected ROI Timeframe:</label>
+                        <input type="text" id="roi_timeframe" name="roi_timeframe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prior_real_estate_knowledge">Prior Real Estate Knowledge:</label>
+                        <input type="text" id="prior_real_estate_knowledge" name="prior_real_estate_knowledge" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="additional_suggestions">Any Additional Suggestions:</label>
+                        <textarea id="additional_suggestions" name="additional_suggestions" rows="4"></textarea>
+                    </div>
+                    <!-- Personal Information -->
+                    <div class="form-group">
+                        <label for="business_background">Business Background:</label>
+                        <input type="text" id="business_background" name="business_background" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="marital_status">Marital Status:</label>
+                        <input type="text" id="marital_status" name="marital_status" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="educational_background">Educational Background:</label>
+                        <input type="text" id="educational_background" name="educational_background" required>
+                    </div>
+                    <!-- Checkbox Questions -->
+                    <div class="form-group">
+                        <label>Would you like to be present in person during your investment duration?</label><br>
+                        <input type="checkbox" id="in_person_investment" name="in_person_investment">
+                        <label for="in_person_investment">Yes</label>
+                    </div>
+                    <div class="form-group">
+                        <label>Would you like to book an appointment with the MD?</label><br>
+                        <input type="checkbox" id="book_appointment_md" name="book_appointment_md">
+                        <label for="book_appointment_md">Yes</label>
                     </div>
                     <!-- Location Information -->
                     <div class="form-group">

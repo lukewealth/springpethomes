@@ -21,6 +21,124 @@ slideImage(); // Show the first image centered immediately
 setInterval(slideImage, 20000); // Transition to the next image after 10 seconds delay (10s display + 10s delay) // Transition to the next image after 10 seconds delay (10s display + 10s delay)
 
 // JavaScript for chatbot functionality
+/ Function to update location details based on selected location
+function updateLocationDetails(location) {
+    // Dummy data based on the selected location (Replace with your own data or API calls)
+    const locationData = {
+        nigeria: {
+            cityName: "Lagos",
+            population: "21 million",
+            climate: "Tropical",
+            language: "English"
+        },
+        ghana: {
+            cityName: "Accra",
+            population: "2.3 million",
+            climate: "Tropical Savannah",
+            language: "English"
+        },
+        canada: {
+            cityName: "Toronto",
+            population: "2.9 million",
+            climate: "Temperate",
+            language: "English, French"
+        }
+        // Add more location data as needed
+    };
+
+    // Access the selected location data and update the content
+    const selectedLocation = locationData[location];
+    const locationDetails = document.getElementById("locationDetails");
+    if (selectedLocation) {
+        locationDetails.innerHTML = 
+            <h3>Details for ${selectedLocation.cityName}, ${location.charAt(0).toUpperCase() + location.slice(1)}</h3>
+            <p>Population: ${selectedLocation.population}</p>
+            <p>Climate: ${selectedLocation.climate}</p>
+            <p>Language: ${selectedLocation.language}</p>
+        ;
+    } else {
+        locationDetails.innerHTML = <p>No data available for this location.</p>;
+    }
+}
+
+// Event listener for dropdown change
+const locationDropdown = document.getElementById("locationDropdown");
+locationDropdown.addEventListener("change", function() {
+    const selectedLocation = this.value.toLowerCase(); // Get selected location
+    updateLocationDetails(selectedLocation); // Call function to update details
+});
+
+// Get user's geolocation
+function getUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            // Get latitude and longitude
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            // Use latitude and longitude to fetch user's location (you can use APIs like reverse geocoding)
+            // For simplicity, here we directly use the selected location as 'nigeria'
+            updateLocationDetails('nigeria');
+        }, function(error) {
+            console.error('Error getting user location:', error);
+        });
+    } else {
+        console.error('Geolocation is not supported by this browser.');
+    }
+}
+
+// Call function to get user's location
+getUserLocation();
+// Function to fetch location details based on latitude and longitude using OpenCage Geocoding API
+function fetchLocationDetails(latitude, longitude) {
+    const apiKey = 'YOUR_OPENCAGE_API_KEY'; // Replace 'YOUR_OPENCAGE_API_KEY' with your actual API key
+    const apiUrl = https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${latitude}+${longitude}&pretty=1;
+
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Access the location details from the API response and update the content
+            const locationDetails = document.getElementById("locationDetails");
+            if (data.results && data.results.length > 0) {
+                const location = data.results[0];
+                const formattedAddress = location.formatted;
+                const country = location.components.country;
+                const city = location.components.city  location.components.town  location.components.village;
+
+                locationDetails.innerHTML = 
+                    <h3>Details for ${city}, ${country}</h3>
+                    <p>Formatted Address: ${formattedAddress}</p>
+                ;
+            } else {
+                locationDetails.innerHTML = <p>No location details found.</p>;
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching location details:', error);
+        });
+}
+
+// Function to get user's geolocation and fetch location details
+function getUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            fetchLocationDetails(latitude, longitude);
+        }, function(error) {
+            console.error('Error getting user location:', error);
+        });
+    } else {
+        console.error('Geolocation is not supported by this browser.');
+    }
+}
+
+// Call function to get user's location and fetch location details
+getUserLocation();
 // Define your chatbot logic here
 function sendMessage() {
 // Get user input message
